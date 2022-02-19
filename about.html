@@ -1,19 +1,15 @@
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
     <title>Arsh</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Arsh</a>
+            <a class="navbar-brand" href="#">V</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -22,88 +18,185 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link " aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="about.html">About</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Blog</a></li>
-                            <li><a class="dropdown-item" href="#">Technology</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Support</a></li>
-                            <li><a class="dropdown-item" href="#">Write for us</a></li>
-                        </ul>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
                 </ul>
-                <form class="d-flex">
+                <form class="my-2 d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
                 </form>
                 <div class="mx-2">
-                <button class="btn btn-secondary">Login</button>
-                <button class="btn btn-secondary">Sign Up</button>
-                 </div>
+                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+                </div>
+                
             </div>
         </div>
     </nav>
-    <div class="container my-4">
-        <div class="row featurette d-flex justify-content-center align-items-center">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Hodophile <span class="text-muted">The one who to travel.</span></h2>
-                <p class="lead">Once a year go somewhere you have never been before.</p>
-            </div>
-            <div class="col-md-5">
-                <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
-                        dy=".3em">500x500</text>
-                </svg> -->
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" src="mountains.jpeg" alt="">
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login to ...</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
             </div>
         </div>
-        <!doctype html>
-        <html lang="en">
-        <div class="row featurette d-flex justify-content-center align-items-center">
+    </div>
+
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Get an ... Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <div class="my-4 row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Hodophile <span class="text-muted">The one who loves to travel.</span></h2>
+                <p class="lead">Once a year go somewhere you have never been before.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique commodi dignissimos eos, voluptatum molestias blanditiis, dolore maxime veritatis quos, iusto quis nihil! Temporibus aperiam, reiciendis est debitis doloribus magni fugit exercitationem dolor, explicabo, quo optio natus cumque laboriosam ipsum illum?</p>
+            </div>
+            <div class="col-md-5">
+                <img class="rounded bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="https://source.unsplash.com/400x220/?nature" alt="">
+            </div>
+        </div>
+        <div class="my-4 row featurette d-flex justify-content-center align-items-center">
             <div class="col-md-7 order-md-2">
                 <h2 class="featurette-heading">Solivagant <span class="text-muted">A solitary wandrer.</span></h2>
                 <p class="lead">The biggest adventure you can take is to live the life of your dreams.</p>
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, iusto accusantium quis voluptatum laudantium praesentium explicabo beatae veniam, itaque eaque magnam eum harum ut obcaecati! Itaque nihil ullam ducimus at excepturi. Blanditiis accusantium molestias quia.</p>
             </div>
             <div class="col-md-5">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" src="grass.jpeg" alt="">
+                <img class="rounded bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="https://source.unsplash.com/400x220/?fire" alt="">
 
             </div>
         </div>
-        <!doctype html>
-        <html lang="en">
-        <div class="row featurette d-flex justify-content-center align-items-center">
+        <div class="my-4 row featurette d-flex justify-content-center align-items-center">
             <div class="col-md-7">
                 <h2 class="featurette-heading">Wayfarer <span class="text-muted">A person who travelsmon foot.</span></h2>
                 <p class="lead">People don't take trips, trips take them.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis sunt saepe minima dolores facilis illo natus vel hic, tenetur odio libero quibusdam tempora deserunt, accusantium in necessitatibus molestias reprehenderit illum eaque exercitationem. Facere iure harum qui officia laudantium eaque.</p>
             </div>
             <div class="col-md-5">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" src="flower.jpeg" alt="">
+                <img class="rounded bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="https://source.unsplash.com/400x220/?night" alt="">
 
             </div>
         </div>
-        <!doctype html>
-        <html lang="en">
     </div>
+
+    <div class="container my-4">
+        <div class="my-4 row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Solivagant <span class="text-muted">A solitary wandrer.</span></h2>
+                <p class="lead">The biggest adventure you can take is to live the life of your dreams.</p>
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, iusto accusantium quis voluptatum laudantium praesentium explicabo beatae veniam, itaque eaque magnam eum harum ut obcaecati! Itaque nihil ullam ducimus at excepturi. Blanditiis accusantium molestias quia.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="rounded bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="https://source.unsplash.com/400x220/?moon" alt="">
+
+            </div>
+        </div>
+        <div class="my-4 row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Wayfarer <span class="text-muted">A person who travelsmon foot.</span></h2>
+                <p class="lead">People don't take trips, trips take them.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis sunt saepe minima dolores facilis illo natus vel hic, tenetur odio libero quibusdam tempora deserunt, accusantium in necessitatibus molestias reprehenderit illum eaque exercitationem. Facere iure harum qui officia laudantium eaque.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="rounded bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="https://source.unsplash.com/400x220/?beach" alt="">
+
+            </div>
+        </div>
+        <div class="my-4 row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">Solivagant <span class="text-muted">A solitary wandrer.</span></h2>
+                <p class="lead">The biggest adventure you can take is to live the life of your dreams.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, iusto accusantium quis voluptatum laudantium praesentium explicabo beatae veniam, itaque eaque magnam eum harum ut obcaecati! Itaque nihil ullam ducimus at excepturi. Blanditiis accusantium molestias quia.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="rounded bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="https://source.unsplash.com/400x220/?flowers" alt="">
+
+            </div>
+        </div>
+        <div class="my-4 row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Hodophile <span class="text-muted">The one who loves to travel.</span></h2>
+                <p class="lead">Once a year go somewhere you have never been before.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique commodi dignissimos eos, voluptatum molestias blanditiis, dolore maxime veritatis quos, iusto quis nihil! Temporibus aperiam, reiciendis est debitis doloribus magni fugit exercitationem dolor, explicabo, quo optio natus cumque laboriosam ipsum illum?</p>
+            </div>
+            <div class="col-md-5">
+                <img class="rounded bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" src="https://source.unsplash.com/400x220/?mountains" alt="">
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <footer class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3">
@@ -115,19 +208,11 @@
           </ul>
           <p class="text-center text-muted">© 2021 Company, Inc</p>
         </footer>
-      </div>
-    <!-- Optional JavaScript; choose one of the two! -->
+    </div>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
-    -->
 </body>
 
 </html>
